@@ -1,0 +1,4 @@
+Enter Styles To apply<input #textbox type="text" [value]="'Enter style'"/>
+<br>
+<button (click)="applyStyle(textbox.value)">Apply Style</button>
+<div [ngStyle]="myStyle">Sample text</div>

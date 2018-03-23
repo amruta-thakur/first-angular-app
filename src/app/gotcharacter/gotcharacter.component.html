@@ -1,0 +1,20 @@
+<img src={{imageUrlChild}}/>
+<br>
+<br>
+<ul class="list-group">
+	<li class="list-group-item" style="width:70%;">{{GOTCharacter[0]}}</li>
+	<li class="list-group-item" style="width:70%;">{{GOTCharacter[1]}}</li>
+	<li class="list-group-item" style="width:70%;">{{GOTCharacter[2]}}</li>
+	<li class="list-group-item" style="width:70%;">{{GOTCharacter[3]}}</li>
+
+</ul>
+<br>
+<button class="btn btn-primary" (click)="startSwitchingName()" >Switch Names</button>
+
+<button class="btn btn-danger" [disabled]="stopSwitchStatus" (click)="stopSwitchingName()">Stop</button>
+<br>
+<br>
+<div>
+<input type="text" [(ngModel)]="twoWayData" [value]="twoWayData"/>
+{{twoWayData}}
+</div>

@@ -1,0 +1,20 @@
+<button (click)="toggleHero()">Toggle Hero</button>
+
+<div *ngIf="toggleHerosFlag">
+	<div *ngFor="let hero of dcHeroes; let i=index" (click)="selectHero(hero)" appMakeBold bgColor="pink">
+		{{i+1}}){{hero}}
+	</div>	
+</div>
+
+<div [ngSwitch]="selectedHero" [ngStyle]="myStyles">
+	<div *ngSwitchCase="dcHeroes[0]">Bruce Wayne</div>
+	<div *ngSwitchCase="'Superman'">Clarke Kent</div>
+	<div *ngSwitchCase="dcHeroes[2]">Princess Diana</div>
+	<div *ngSwitchDefault>None of heros selected</div>
+</div>
+<button (click)="setStyle()">Change styles</button>
+<br>
+<h1 [ngClass]="currentCssClass">Change Css Class</h1>
+<button (click)="setCssClass()">Change Class</button>
+<h1 [style.color]="inputColor">Change Color as input</h1>
+<input [(ngModel)] = "inputColor" />
